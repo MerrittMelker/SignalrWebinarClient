@@ -1,0 +1,10 @@
+﻿<Window x:Class="SignalrWebinarClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="127,118,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="WidgetCountTextBlock" HorizontalAlignment="Left" Margin="127,195,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
