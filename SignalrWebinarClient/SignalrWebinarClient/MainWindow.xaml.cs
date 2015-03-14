@@ -15,19 +15,27 @@ namespace SignalrWebinarClient
         public MainWindow()
         {
             InitializeComponent();
-            SetupWidget();
+            SetupWidgets();
         }
 
-        private async void SetupWidget()
+        private async void SetupWidgets()
         {
             var hubConnection = new HubConnection("http://localhost:56531/");
             var hubProxy = hubConnection.CreateHubProxy("widgetHub");
+            var hubProxy2 = hubConnection.CreateHubProxy("chatHub");
 
             hubProxy.On<int>("updateWidgetCount",
                 count =>
                     Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action) (() =>
                     {
                         WidgetCountTextBlock.Text = count.ToString();
+                    })));
+
+            hubProxy2.On<string>("broadcastMessage",
+                message =>
+                    Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(() =>
+                    {
+                        ChatHubText.Text += Environment.NewLine + message;
                     })));
 
             await hubConnection.Start();

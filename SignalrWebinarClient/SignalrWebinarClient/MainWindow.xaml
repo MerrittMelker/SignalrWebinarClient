@@ -3,8 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="127,118,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBlock x:Name="WidgetCountTextBlock" HorizontalAlignment="Left" Margin="127,195,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="42,75,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="WidgetCountTextBlock" HorizontalAlignment="Left" Margin="42,27,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ChatHubText" HorizontalAlignment="Left" Margin="42,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="351" Height="113"/>
 
     </Grid>
 </Window>
